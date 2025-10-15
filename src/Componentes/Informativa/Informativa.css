@@ -1,0 +1,80 @@
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(190, 157, 255, 0.3);
+  width: 90%;
+  max-width: 350px;
+}
+
+.info-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #bdaaff;
+  letter-spacing: 2px;
+}
+
+.autor {
+  font-size: 1rem;
+  color: #cfcfcf;
+  margin-bottom: 20px;
+}
+
+.info-logo {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 10px rgba(160, 120, 255, 0.4);
+}
+
+.descripcion {
+  background-color: #2e2e2e;
+  padding: 15px;
+  border-radius: 10px;
+  color: #dcdcdc;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.info-link {
+  color: #a585ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+}
+
+.version {
+  margin-top: 10px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 480px) {
+  .info-card {
+    padding: 30px 20px;
+  }
+
+  .info-card h1 {
+    font-size: 2rem;
+  }
+
+  .descripcion {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,102 @@
+/* 🎨 src/Componentes/Detalles/Detalle.css */
+
+.detalle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #fff;
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.detalle-container img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #6b46c1;
+  box-shadow: 0 0 20px rgba(107, 70, 193, 0.5);
+  transition: transform 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.detalle-container img:hover {
+  transform: scale(1.05);
+}
+
+.detalle-container h2 {
+  font-size: 1.8rem;
+  color: #d4bfff;
+  margin-bottom: 0.5rem;
+}
+
+.detalle-container p {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+  color: #ccc;
+}
+
+.detalle-container strong {
+  color: #a855f7;
+}
+
+.detalle-container button {
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, #6b46c1, #9f7aea);
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.detalle-container button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #805ad5, #b794f4);
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+  .detalle-container {
+    padding: 1.5rem;
+  }
+
+  .detalle-container img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .detalle-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .detalle-container p {
+    font-size: 1rem;
+  }
+
+  .detalle-container button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detalle-container {
+    padding: 1rem;
+  }
+
+  .detalle-container img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .detalle-container h2 {
+    font-size: 1.3rem;
+  }
+}

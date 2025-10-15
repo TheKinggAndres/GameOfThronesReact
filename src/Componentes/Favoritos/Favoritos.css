@@ -1,0 +1,116 @@
+/* 🎨 src/pages/Favoritos/Favoritos.css */
+
+.favoritos-container {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.favoritos-container h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #d4bfff;
+  text-shadow: 0 0 8px rgba(162, 115, 255, 0.6);
+}
+
+.favoritos-container p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* 📜 Lista de tarjetas */
+.favoritos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* 🧊 Cada tarjeta */
+.favorito-card {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 180px;
+  box-shadow: 0 0 15px rgba(162, 115, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorito-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(162, 115, 255, 0.6);
+}
+
+.favorito-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.favorito-card h4 {
+  font-size: 1.1rem;
+  margin: 0.8rem 0;
+  color: #e0ccff;
+  transition: color 0.3s ease;
+}
+
+.favorito-card:hover h4 {
+  color: #b794f4;
+}
+
+/* Enlaces sin subrayado */
+.favorito-card a {
+  text-decoration: none;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+  .favoritos-container {
+    padding: 1.5rem;
+  }
+
+  .favoritos-container h1 {
+    font-size: 1.7rem;
+  }
+
+  .favoritos-lista {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .favorito-card {
+    width: 140px;
+  }
+
+  .favorito-card img {
+    height: 160px;
+  }
+
+  .favorito-card h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favoritos-container {
+    padding: 1rem;
+  }
+
+  .favoritos-lista {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .favorito-card {
+    width: 120px;
+  }
+
+  .favorito-card img {
+    height: 140px;
+  }
+
+  .favorito-card h4 {
+    font-size: 0.9rem;
+  }
+}
