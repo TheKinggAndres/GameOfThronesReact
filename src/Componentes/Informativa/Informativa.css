@@ -105,8 +105,6 @@ html, body {
     font-size: 0.9rem;
   }
 }
-
-
 /* Asegura que solo se aplique cuando la página de Informativa está activa */
 .info-container {
   display: flex;
