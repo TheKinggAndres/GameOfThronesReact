@@ -3,6 +3,8 @@ import "./Informativa.css";
 
 function Informativa() {
   return (
+    <>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br/>
     <div className="info-container">
       <div className="info-card">
         <h1>THRONES API</h1>
@@ -36,6 +38,7 @@ function Informativa() {
         <p className="version">v 2.0</p>
       </div>
     </div>
+  </>
   );
 }
 
