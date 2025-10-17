@@ -2,18 +2,21 @@
 
 /* 🌌 CONTENEDOR GENERAL */
 .menu-container {
-  background-color: #0a0a0a;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
   min-height: 100vh;
   color: #fff;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
+/* 🏰 TÍTULO PRINCIPAL */
 .menu-container h1 {
-  font-size: 2.2rem;
-  color: #d4bfff;
-  text-shadow: 0 0 10px rgba(162, 115, 255, 0.6);
+  font-size: 2.4rem;
+  color: #bdaaff;
   margin-bottom: 2rem;
+  text-shadow: 0 0 12px rgba(190, 157, 255, 0.7);
+  letter-spacing: 1.5px;
 }
 
 /* 🔍 BUSCADOR Y FILTRO */
@@ -27,20 +30,21 @@
 
 .buscador-filtro input,
 .buscador-filtro select {
-  background-color: #1a1a1a;
-  border: 1px solid #444;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(162, 115, 255, 0.4);
   color: #fff;
   padding: 0.8rem 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 1rem;
   outline: none;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
 }
 
 .buscador-filtro input:focus,
 .buscador-filtro select:focus {
-  border-color: #a277ff;
-  box-shadow: 0 0 10px rgba(162, 115, 255, 0.5);
+  border-color: #bdaaff;
+  box-shadow: 0 0 12px rgba(190, 157, 255, 0.5);
 }
 
 /* 🧙‍♂️ LISTA DE PERSONAJES */
@@ -53,44 +57,78 @@
 
 /* 💎 TARJETAS DE PERSONAJES */
 .card-personaje {
-  background-color: #1a1a1a;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
   overflow: hidden;
   width: 200px;
-  box-shadow: 0 0 15px rgba(162, 115, 255, 0.25);
+  box-shadow: 0 0 18px rgba(160, 120, 255, 0.25);
+  backdrop-filter: blur(8px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-personaje:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(162, 115, 255, 0.6);
+  box-shadow: 0 0 28px rgba(190, 157, 255, 0.6);
 }
 
+/* 🖼️ Imagen */
 .card-personaje img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  border-bottom: 2px solid #bdaaff;
 }
 
+/* ✨ Texto */
 .card-personaje h3 {
   margin: 0.6rem 0 0.2rem;
-  color: #e0ccff;
+  color: #e4d3ff;
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 .card-personaje p {
-  color: #aaa;
+  color: #cfcfcf;
   font-size: 0.95rem;
   margin-bottom: 0.8rem;
 }
 
 .card-personaje:hover h3 {
-  color: #b794f4;
+  color: #c5b3ff;
 }
 
 .card-personaje a {
   text-decoration: none;
+  display: block;
+}
+
+/* ⚔️ MENÚ SUPERIOR */
+.c-menu {
+  background: rgba(10, 10, 10, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid rgba(162, 115, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.c-menu a {
+  color: #d8c8ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.c-menu a:hover {
+  color: #b98bff;
+  transform: scale(1.1);
 }
 
 /* 📱 RESPONSIVO */
@@ -106,7 +144,7 @@
   }
 
   .menu-container h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .buscador-filtro {
@@ -125,6 +163,16 @@
 
   .card-personaje img {
     height: 180px;
+  }
+
+  .c-menu {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+
+  .c-menu a {
+    font-size: 1rem;
   }
 }
 
@@ -156,50 +204,7 @@
   .card-personaje p {
     font-size: 0.85rem;
   }
-}
-/* ⚔️ src/Componentes/Menu.css */
 
-.c-menu {
-  background-color: #0a0a0a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 1rem 0;
-  border-bottom: 2px solid rgba(162, 115, 255, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.c-menu a {
-  color: #d8c8ff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.c-menu a:hover {
-  color: #b98bff;
-  transform: scale(1.1);
-}
-
-/* 📱 RESPONSIVO */
-@media (max-width: 768px) {
-  .c-menu {
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0.8rem;
-  }
-
-  .c-menu a {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
   .c-menu {
     flex-direction: column;
     gap: 0.7rem;
