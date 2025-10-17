@@ -105,3 +105,26 @@ html, body {
     font-size: 0.9rem;
   }
 }
+
+
+/* Asegura que solo se aplique cuando la página de Informativa está activa */
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 0; /* Asegura que no cubra otros componentes */
+}
+
+body {
+  background: #000; /* Fondo base oscuro para todo el sitio */
+  color: #fff;
+  margin: 0;
+  overflow-x: hidden;
+}
